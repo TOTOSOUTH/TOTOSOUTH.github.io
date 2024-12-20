@@ -1,526 +1,166 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-12-21 01:41:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-web" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/12/20/web/" class="article-date">
-  <time class="dt-published" datetime="2024-12-20T15:18:07.759Z" itemprop="datePublished">2024-12-20</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/12/20/web/">web前端</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/12/20/web/" title="web前端">web前端</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-12-20T15:18:07.759Z" title="Created 2024-12-20 23:18:07">2024-12-20</time></span></div><div class="content">HTML5一、定义是用来描述网页的一种语言，被称为超文本标记语言。标记语言是一套标记标签。标签是由尖括号包围的关键字
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h3><p>是用来描述网页的一种语言，被称为超文本标记语言。标记语言是一套标记标签。标签是由尖括号包围的关键字</p>
-<ul>
-<li>单标签：<blockquote>
-<p>e.g. <code>&lt;img&gt;</code></p>
-</blockquote>
-</li>
-<li>双标签：<blockquote>
-<p>e.g. <code>&lt;html&gt;&lt;/html&gt;</code></p>
-</blockquote>
-</li>
-</ul>
-<h3 id="二、-DOCTYPE声明"><a href="#二、-DOCTYPE声明" class="headerlink" title="二、 DOCTYPE声明"></a>二、 DOCTYPE声明</h3><p><code>&lt;!doctype html&gt;</code> 位于文档最前面，处于标签之前，避免浏览器的怪异模式 </p>
-<h3 id="三、基本骨架"><a href="#三、基本骨架" class="headerlink" title="三、基本骨架"></a>三、基本骨架</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;  //限定文档开始与结束</span><br><span class="line"></span><br><span class="line">&lt;head&gt;  //给浏览器或者开发者看的</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;  //描述一个文档属性，关键词等</span><br><span class="line">    &lt;title&gt;  //文件标题 有利于SEO优化</span><br><span class="line">        hello</span><br><span class="line">    &lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;  //定义文档主体 包含文档全部内容（文本、超链接、图像、表格等）</span><br><span class="line">    hello world!</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>SEO是搜索引擎英文缩写，通过对网站的调整，满足搜索引擎的排名需求(广告除外)</p>
-<h3 id="四、标题标签"><a href="#四、标题标签" class="headerlink" title="四、标题标签"></a>四、标题标签</h3><h4 id="1-标题介绍与应用"><a href="#1-标题介绍与应用" class="headerlink" title="1. 标题介绍与应用"></a>1. 标题介绍与应用</h4><p>   标题是通过 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> (双标签) 标签进行定义的  </p>
-<p>   <code>&lt;h1&gt;</code>定义最大标题<br>   <code>&lt;h6&gt;</code>定义最大标题 </p>
-<blockquote>
-<p>快速生成六个标题标签快捷键：&#x3D;&#x3D;h$*6&#x3D;&#x3D;</p>
-</blockquote>
-<hr>
-<p><strong>正确使用标签</strong></p>
-<pre><code>1. 请确保html标题标签只用于标题  
-2. 不要仅仅为了生成加粗体或大号文本使用标题
-3. 正确使用标题有益于SEO
-4. 根据重要程度定义标题级别
-</code></pre>
-<h4 id="2-标题标签位置摆放"><a href="#2-标题标签位置摆放" class="headerlink" title="2. 标题标签位置摆放"></a>2. 标题标签位置摆放</h4><p>在标签中添加属性：</p>
-<blockquote>
-<p>align &#x3D; “left || center || right”  默认居左</p>
-</blockquote>
-<h3 id="五、标签之段落、换行、水平线"><a href="#五、标签之段落、换行、水平线" class="headerlink" title="五、标签之段落、换行、水平线"></a>五、标签之段落、换行、水平线</h3><h4 id="1-段落标签"><a href="#1-段落标签" class="headerlink" title="1. 段落标签"></a>1. 段落标签</h4><p>段落是通过<code>&lt;p&gt;</code>标签定义的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;一个段落&lt;\p&gt;</span><br><span class="line">&lt;p&gt;另一个段落&lt;\p&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="2-换行标签"><a href="#2-换行标签" class="headerlink" title="2. 换行标签"></a>2. 换行标签</h4><p>在不产生一个新段落的前提下换行，使用<code>&lt;br&gt;</code></p>
-<blockquote>
-<p><code>&lt;p&gt;</code>在一个段落中<code>&lt;br&gt;</code>换行<code>&lt;/p&gt;</code></p>
-</blockquote>
-<h4 id="3-水平线"><a href="#3-水平线" class="headerlink" title="3. 水平线"></a>3. 水平线</h4><p><code>&lt;hr/&gt;</code>标签在HTML页面中创建水平线</p>
-<blockquote>
-<p><code>&lt;hr color = &quot;&quot; width = &quot;&quot; size = &quot;&quot; allign = &quot;&quot; /&gt;</code></p>
-</blockquote>
-<ul>
-<li><p>属性：</p>
-<ol>
-<li>color：设置水平线颜色</li>
-<li>width：设置水平线宽度</li>
-<li>size：设置水平线高度</li>
-<li>align：设置水平线对齐方式（默认居中），可取值 left || right</li>
-</ol>
-</li>
-</ul>
-<h3 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h3><h4 id="1、图片的标签"><a href="#1、图片的标签" class="headerlink" title="1、图片的标签"></a>1、图片的标签</h4><p>&lt; img &gt; 标签定义HTML页面中图像</p>
-<blockquote>
-<p><code>&lt;img str = &quot;&quot; alt = &quot;&quot; title = &quot;&quot; width = &quot;&quot; height = &quot;&quot;&gt;</code></p>
-</blockquote>
-<ul>
-<li>注： 是单标签，无需进行闭合操作</li>
-<li>属性<ol>
-<li>src：路径（图片地址与名字）</li>
-<li>alt：规定图像的代替文本</li>
-<li>width：规定图像的宽度</li>
-<li>height：规定图像的高度</li>
-<li>title：鼠标悬停在图像上给予提示</li>
-</ol>
-</li>
-</ul>
-<h4 id="2、图片路径"><a href="#2、图片路径" class="headerlink" title="2、图片路径"></a>2、图片路径</h4><ol>
-<li>绝对路径</li>
-<li>相对路径<ol>
-<li>子级关系：&#x2F;</li>
-<li>父级关系：..&#x2F;</li>
-<li>同级关系: .&#x2F; (可省略)</li>
-</ol>
-</li>
-<li>网络路径（直接复制网址）</li>
-</ol>
-<h3 id="七、超文本链接"><a href="#七、超文本链接" class="headerlink" title="七、超文本链接"></a>七、超文本链接</h3><h4 id="1-超链接标签"><a href="#1-超链接标签" class="headerlink" title="1. 超链接标签"></a>1. 超链接标签</h4><p>HTML使用标签<code>&lt;a&gt;</code>来设置超文本链接（双标签）</p>
-<blockquote>
-<p><code>&lt;a href = &quot;ur1&quot;&gt;链接文本&lt;/a&gt;</code></p>
-</blockquote>
-<ul>
-<li>属性<br>在标签<code>&lt;a&gt;</code>中使用了 href 属性来描述链接地址，默认情况下，链接将以以下形式出现在浏览器中：<ol>
-<li>一个未访问过的链接显示为蓝色字体并带有下划线</li>
-<li>访问过的链接显示为紫色字体并带有下划线</li>
-<li>点击链接时，链接显示为红色字体并带有下划线</li>
-</ol>
-</li>
-<li>可通过css样式修改以上效果</li>
-</ul>
-<h4 id="2-超链接表现"><a href="#2-超链接表现" class="headerlink" title="2. 超链接表现"></a>2. 超链接表现</h4><p>鼠标悬停在上方时，鼠标样式改变</p>
-<h3 id="八、文本标签"><a href="#八、文本标签" class="headerlink" title="八、文本标签"></a>八、文本标签</h3><h4 id="1-常用文本标签"><a href="#1-常用文本标签" class="headerlink" title="1. 常用文本标签"></a>1. 常用文本标签</h4><table>
-<thead>
-<tr>
-<th align="center">标签</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>&lt;em&gt;</code></td>
-<td align="center">定义着重文字</td>
-</tr>
-<tr>
-<td align="center"><code>&lt;b&gt;</code></td>
-<td align="center">定义加粗文字</td>
-</tr>
-<tr>
-<td align="center"><code>&lt;i&gt;</code></td>
-<td align="center">定义斜体字</td>
-</tr>
-<tr>
-<td align="center"><code>&lt;strong&gt;</code></td>
-<td align="center">定义加重语气</td>
-</tr>
-<tr>
-<td align="center"><code>&lt;del&gt;</code></td>
-<td align="center">定义删除字</td>
-</tr>
-<tr>
-<td align="center"><code>&lt;span&gt;</code></td>
-<td align="center">元素没有特定含义</td>
-</tr>
-</tbody></table>
-<ul>
-<li>常用文本标签和段落是不同的，段落代表一段文本，而文本标签一般表示文本词汇</li>
-</ul>
-<h3 id="九、-列表标签"><a href="#九、-列表标签" class="headerlink" title="九、 列表标签"></a>九、 列表标签</h3><h4 id="1-有序列表"><a href="#1-有序列表" class="headerlink" title="1. 有序列表"></a>1. 有序列表</h4><p>有序列表是一列项目，列表项目使用数字进行标记。有序列表始于<code>&lt;ol&gt;</code>标签。每个列表项始于<code>&lt;li&gt;</code>标签。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt; xixixi &lt;/li&gt;</span><br><span class="line">    &lt;li&gt; hahaha &lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>type属性</p>
-<p><code>&lt;ol&gt;</code>的属性type拥有的选项</p>
-<ol>
-<li>1 表示列表项目用数字标号（1，2，3 …）</li>
-<li>a 表示列表项目用小写字母标号（a，b，c …）</li>
-<li>A 表示列表项目用大写字母标号（A，B，C …）</li>
-<li>i 表示列表项目用小写罗马数字标号（i，ii，iii …）</li>
-<li>I 表示列表项目用大写罗马数字标号（I，II，III …）</li>
-</ol>
-</li>
-<li><p>有序列表嵌套</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;xixixi&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;ol&gt;</span><br><span class="line">            &lt;li&gt;hello&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;world&lt;/li&gt;</span><br><span class="line">        &lt;/ol&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;hahaha&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="2-无序列表"><a href="#2-无序列表" class="headerlink" title="2. 无序列表"></a>2. 无序列表</h4><p>无序列表是一个项目列表，此项目使用粗体圆点进行标记<br>无序列表始于<code>&lt;ul&gt;</code>标签。每个列表始于<code>&lt;li&gt;</code>标签</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;xixi&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;haha&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+单标签：
+e.g. &lt;img&gt;
 
-<ul>
-<li><p>type属性</p>
-<p><code>&lt;ul&gt;</code>的属性type拥有的选项</p>
-<ol>
-<li>disc：默认实心圆</li>
-<li>circle：空心圆</li>
-<li>square：小方块</li>
-<li>none：不显示</li>
-</ol>
-</li>
-<li><p>无序列表嵌套</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;xixi&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;heihei</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;lala&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;haha&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>导航效果（通过css 改变样式）</p>
-</li>
-<li><p>快捷键</p>
-<blockquote>
-<p>快速生成 ul + li 的布局：&#x3D;&#x3D;ul&gt;li*n&#x3D;&#x3D;（n为数字，根据需要li数量更改）</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="十、表格"><a href="#十、表格" class="headerlink" title="十、表格"></a>十、表格</h3><h4 id="1-表格标签"><a href="#1-表格标签" class="headerlink" title="1. 表格标签"></a>1. 表格标签</h4><ul>
-<li>表格：<code>&lt;table&gt;</code></li>
-<li>行：<code>&lt;tr&gt;</code></li>
-<li>列：<code>&lt;td&gt;</code></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;  //两行三列</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;1&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;2&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;3&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;4&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;5&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;6&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>快捷键：</p>
-<blockquote>
-<p>快速生成表格结构：&#x3D;&#x3D;table&gt;tr<em>n&gt;td</em>m{文本信息}&#x3D;&#x3D;</p>
-</blockquote>
-</li>
-<li><p>表格属性</p>
-<ol>
-<li>border：设置表格的边框</li>
-<li>width：设置表格的宽度</li>
-<li>height：设置表格的高度</li>
-</ol>
-</li>
-</ul>
-<h4 id="2-表格单元格合并"><a href="#2-表格单元格合并" class="headerlink" title="2. 表格单元格合并"></a>2. 表格单元格合并</h4><ul>
-<li>水平合并：colspan  （保留左边删除右边）</li>
-<li>垂直合并：rowspan  （保留上边删除下边）</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table border=&quot;1&quot;&gt;   //合并单元格1和单元格2 原来的单元格2可直接删除</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td colspan=&quot;2&quot;&gt;单元格1 单元格2&lt;/td&gt;</span><br><span class="line">        //&lt;td&gt;单元格2&lt;/td&gt; 合并前</span><br><span class="line">        &lt;td&gt;单元格3&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;单元格4&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;单元格5&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;单元格6&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="十一、Form表单"><a href="#十一、Form表单" class="headerlink" title="十一、Form表单"></a>十一、Form表单</h3><h4 id="1-表单组成"><a href="#1-表单组成" class="headerlink" title="1. 表单组成"></a>1. 表单组成</h4><p>表单在Web网页中用来给用户填写信息，从而能采集用户信息，使网页具有交互功能。<br>所有用户输入内容的地方都用表单来写，如登陆注册、搜索框</p>
-<ul>
-<li><p>表单是由容器和控件组成的，一个表单一般应该包括用户填写信息的输入框、按钮等，这些输入框、按钮叫做&#x3D;&#x3D;控件&#x3D;&#x3D;，表单就是&#x3D;&#x3D;容器&#x3D;&#x3D;，它能容纳各种各样的控件。</p>
-<blockquote>
-<p><code>&lt;form action = &quot;url&quot; method = &quot;get|post&quot; name = &quot;myform&quot;&gt;&lt;/form&gt;</code></p>
-</blockquote>
-</li>
-<li><p>属性说明：</p>
-<ol>
-<li>action：服务器地址</li>
-<li>name：表单名称</li>
-<li>method 中 get 和 post 的区别<ol>
-<li>数据提交方式，get 把提交的数据 url可以看到，post 看不到</li>
-<li>get 一般用于提交少量数据，post 用来提交大量数据</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>表单元素<br>一个完整的表单包含三个基本组成部分：表单标题、表单域、表单按钮</p>
-<ol>
-<li>表单标签</li>
-<li>表单域</li>
-<li>表单按钮</li>
-</ol>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot;&gt;  //搜索框 表单域</span><br><span class="line">    &lt;input type=&quot;submit&quot;&gt;  //按钮 表单按钮</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-表单元素"><a href="#2-表单元素" class="headerlink" title="2. 表单元素"></a>2. 表单元素</h4><ul>
-<li><p>文本框<br>文本域通过<code>&lt;input type = &quot;text&quot;&gt;</code>标签来设定，当用户要在表单中输入字母、数字等内容时，就会用到文本域</p>
-</li>
-<li><p>密码框<br>密码字段通过标签<code>&lt;input type = &quot;password&quot;&gt;</code>来定义</p>
-<ul>
-<li>密码字段字符不会明文显示，而是用星号或者圆点代替</li>
-</ul>
-</li>
-<li><p>提交按钮<br>当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理</p>
-<p><code>&lt;input type = &quot;submit&quot; value = &quot;你好&quot;&gt;</code> value 替换按钮文本</p>
-</li>
-</ul>
-<h3 id="十二、块元素与行内元素（内联元素）"><a href="#十二、块元素与行内元素（内联元素）" class="headerlink" title="十二、块元素与行内元素（内联元素）"></a>十二、块元素与行内元素（内联元素）</h3><ul>
-<li>区别</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">块级元素</th>
-<th align="center">内联元素</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">块元素会在页面中独占一行（自上向下垂直排列）</td>
-<td align="center">行内元素不会独占页面中的一行，只占自身的大小</td>
-</tr>
-<tr>
-<td align="center">可以设置 width，height 属性</td>
-<td align="center">行内元素设置 width，height 属性无效</td>
-</tr>
-<tr>
-<td align="center">一般块级元素可以包含行内元素和其他块级元素</td>
-<td align="center">一般行内元素包含行内元素不包含块级元素</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>常见块级元素</p>
-<blockquote>
-<p>div、form、h1~h6、hr、p、table、ul 等</p>
-</blockquote>
-</li>
-<li><p>常见内联元素</p>
-<blockquote>
-<p>a、b、em、i、span、strong 等</p>
-</blockquote>
-</li>
-<li><p>行内块状元素（特点：不换行、能够识别宽高）</p>
-<blockquote>
-<p>button、img、input 等</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="十三、HTML5新增标签"><a href="#十三、HTML5新增标签" class="headerlink" title="十三、HTML5新增标签"></a>十三、HTML5新增标签</h3><ul>
-<li><p>扩展：</p>
-<ul>
-<li>div 容器元素，也是页面中见到的最多的元素（调整布局 增加区域清晰度）</li>
-</ul>
-<p>原来:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;nav&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;article&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;section&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;silder&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>新增:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;&lt;/header&gt;  //头部</span><br><span class="line">&lt;nav&gt;&lt;/nav&gt;  //导航</span><br><span class="line">&lt;article&gt;  //代表一个独立的、完整的相关内容块</span><br><span class="line">    &lt;section&gt;&lt;/section&gt;  //定义文档中的节，比如章节、页眉、页脚</span><br><span class="line">&lt;/article&gt;</span><br><span class="line">&lt;aside&gt;&lt;/aside&gt;  //侧边栏</span><br><span class="line">&lt;footer&gt;&lt;/footer&gt;  //脚部</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/12/20/web/" data-id="cm4wwc7ny0000l4t6evlg36t5" data-title="web前端" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+双标签：
+e.g. &lt;html&gt;&lt;/html&gt;
 
 
 
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/12/20/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-12-20T10:08:34.246Z" itemprop="datePublished">2024-12-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/12/20/hello-world/">Hello World</a>
-    </h1>
-  
+二、 DOCTYPE声明&lt;!doctype html&gt; 位于文档最前面，处于标签之前，避免浏览器的怪异模式 
+三、基本骨架1234567891011121314&lt;html&gt;  //限定文档开始与结束&lt;head&gt;  //给浏览器或者开发者看的    &lt;meta charset=&quot;utf-8&quot;&gt;  //描述一个文档属性，关键词等    &lt;title&gt;  //文件标题 有利于SEO优化        hello    &lt;/title&gt;&lt;/head&gt;&lt;body&gt;  //定义文档主体 包含文档全部内容（文本、超链接、图像、表格等）    hello world!&lt;/body&gt;&lt;/html&gt;
+SEO是搜索引擎英文缩写， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/12/20/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-12-20T10:08:34.246Z" title="Created 2024-12-20 18:08:34">2024-12-20</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+More info: Writing
+Run server1$ hexo server
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+More info: Server
+Generate static files1$ hexo generate
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/12/20/hello-world/" data-id="cm4wlcmed0000jst612kgb4av" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/12/20/web/">web前端</a>
-          </li>
-        
-          <li>
-            <a href="/2024/12/20/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2024/12/20/web/" title="web前端">web前端</a><time datetime="2024-12-20T15:18:07.759Z" title="Created 2024-12-20 23:18:07">2024-12-20</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/12/20/hello-world/" title="Hello World">Hello World</a><time datetime="2024-12-20T10:08:34.246Z" title="Created 2024-12-20 18:08:34">2024-12-20</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">December 2024</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-20T17:41:18.121Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
